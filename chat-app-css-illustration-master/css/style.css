@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid #23a568; */
+}
+
+.flex {
+    display: flex;
+    /* justify-content: center; */
+}
+
+body {
+    font-size: 16px;
+    /* background-color: hsl(270, 20%, 96%); */
+    background-color: #000;
+    /* background-color: hsl(293, 100%, 63%); */
+    /* background-color: hsl(264, 100%, 61%); */
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+}
+
+.mobile {
+    /* padding: 10px 15px; */
+    display: flex;
+    flex-flow: column;
+    width: 500px;
+    background-color: hsl(270, 20%, 96%);
+    margin-inline: auto;
+    margin-top: 100px;
+    align-items: center;
+    border-radius: 40px;
+    padding-top: 15px;
+}
+
+.mobile p {
+    color: hsl(276, 100%, 81%);
+}
+
+/* - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%) */
+/* - Moderate Violet (chat on the left): hsl(276, 55%, 52%) */
+/* - Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%) */
+/* - Grayish Blue (placeholder text): hsl(206, 6%, 79%) */
+/* - Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%) */
+/* - Dark Grayish Violet (paragraph): hsl(270, 7%, 64%) */
+
+.mobile-top {
+    width: calc(100% - 95px);
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
+    /* 上 | 左右 | 下 */
+    /* padding: 1em 2em 2em; */
+
+    /* 上 | 右 | 下 | 左 */
+    /* padding: 5px 1em 0 1em; */
+
+    padding: 40px 15px 10px;
+    padding: 40px 15px 10px 50px;
+
+    /* 左上 | 右上 | 左下 | 右下 */
+    border-radius: 40px 40px 5px 5px;
+
+    position: relative;
+}
+
+.arrow-left {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+    border-left: 4px solid #000;
+    border-bottom: 4px solid #000;
+    transform: translate(-50%);
+}
+
+/* .mobile img::before, */
+/* .mobile img::after { */
+.mobile-top::before,
+.mobile-top::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 10px);
+    left: 40px;
+    width: 15px;
+    height: 3px;
+    border-radius: 9999px;
+    background-color: #FFF;
+    transform-origin: 1.5px 50%;
+}
+
+/* .mobile img::before{ */
+.mobile-top::before {
+    transform: rotate(60deg);
+}
+
+/* .mobile img::after{ */
+.mobile-top::after {
+    transform: rotate(-60deg);
+}
+
+.mobile-top::before {
+
+    /* content: ""; */
+    /* width: 0; */
+    /* height: 0; */
+    /* position: absolute; */
+    /* border-style: solid; */
+
+    /* 上 | 右 | 下 | 左 */
+    /* border-width: 14px 0 14px 10px; */
+    /* border-width: 0 10px 14px 14px; */
+    /* top: 50%; */
+    /* transform: translate(-50%); */
+    /* left: 9px; */
+    /* border-color: transparent transparent transparent #FFF; */
+    /* border-color: transparent #fff transparent transparent; */
+
+    /* display: block; */
+    /* width: 15px; */
+    /* height: 15px; */
+    /* border-left: 2px solid hsl(270, 20%, 96%); */
+    /* border-bottom: 2px solid hsl(270, 20%, 96%); */
+    /* transform: rotate(45deg); */
+
+    /* content: "<"; */
+    /* content: ""; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* width: 15px; */
+    /* height: 15px; */
+    /* margin-right: 5px; */
+
+}
+
+.mobile-top::after {
+    /* content: ""; */
+    /* width: 0; */
+    /* height: 0; */
+    /* position: absolute; */
+    /* border-style: solid; */
+
+    /* 上 | 右 | 下 | 左 */
+    /* border-width: 14px 0 14px 10px; */
+    /* border-width: 0 10px 14px 14px; */
+    /* top: 50%; */
+    /* transform: translate(-50%); */
+    /* left: 10px; */
+    /* border-color: transparent transparent transparent hsl(264, 100%, 61%); */
+    /* border-color: transparent hsl(264, 100%, 61%) transparent transparent; */
+}
+
+.mobile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+    margin: 0 15px;
+    /* position: relative; */
+}
+
+.mobile-top p {
+    color: hsl(0, 0%, 100%);
+}
+
+/* Submitボタンの色 */
+/* background-color: hsl(271, 36%, 24%); */
+
+/* radio button outlineの色 */
+/* hsl(289, 100%, 72%) */
+
+/* - Light Grayish Violet (app background): hsl(270, 20%, 96%) */
+/* - Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%) */
+/* - Very Light Magenta (radio button outline): hsl(289, 100%, 72%) */
