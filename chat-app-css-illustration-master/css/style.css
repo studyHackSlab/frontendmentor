@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+.text {
+    /* - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%) */
+    color: hsl(276, 100%, 81%);
+    /* - Moderate Violet (chat on the left): hsl(276, 55%, 52%) */
+    color: hsl(276, 55%, 52%);
+    /* - Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%) */
+    color: hsl(271, 15%, 43%);
+    /* - Grayish Blue (placeholder text): hsl(206, 6%, 79%) */
+    color: hsl(206, 6%, 79%);
+    /* - Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%) */
+    color: hsl(271, 36%, 24%);
+    /* - Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)     */
+    color: hsl(270, 7%, 64%);
+}
+
 
 * {
     padding: 0;
@@ -12,8 +27,12 @@
     /* justify-content: center; */
 }
 
+.right {
+    justify-content: right;
+}
+
 body {
-    font-size: 16px;
+    font-size: 8px;
     /* background-color: hsl(270, 20%, 96%); */
     background-color: #000;
     /* background-color: hsl(293, 100%, 63%); */
@@ -21,24 +40,137 @@ body {
 }
 
 h1 {
+    font-size: 10px;
     color: hsl(0, 0%, 100%);
+}
+
+h2 {
+    font-size: 8px;
+    /* color: hsl(289, 100%, 72%); */
+    color: hsl(276, 100%, 81%);
 }
 
 .mobile {
     /* padding: 10px 15px; */
     display: flex;
     flex-flow: column;
-    width: 500px;
+    width: 250px;
     background-color: hsl(270, 20%, 96%);
     margin-inline: auto;
     margin-top: 100px;
-    align-items: center;
+    /* align-items: center; */
     border-radius: 40px;
     padding-top: 15px;
+    height: 500px;
 }
 
 .mobile p {
     color: hsl(276, 100%, 81%);
+    background-color: #EDE5F4;
+    width: fit-content;
+    /* width: 50%; */
+    max-width: 50%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.mobile-top img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+
+    /* 上 | 右 | 下 | 左 */
+    margin: 0 15px;
+    margin: 0 10px 0 5px;
+    /* position: relative; */
+}
+
+.mobile-main img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+
+    /* 上 | 右 | 下 | 左 */
+    margin: 0 3px;
+}
+
+.mobile-main .comment-in {
+    display: flex;
+    /* justify-content:right; */
+    /* 上 | 右 | 下 | 左 */
+    margin: 2% 0 2% auto;
+    color: hsl(271, 15%, 43%);
+
+}
+
+.mobile-main .comment-out {
+    margin: 4%;
+    color: hsl(276, 55%, 52%);
+
+    /* display: flex; */
+    /* justify-content:right; */
+    /* background-color: aquamarine; */
+}
+
+.mobile-main .comment-walk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    width: 60%;
+    /* width: calc(100% - 95px); */
+    /* width: calc(100% - 60px); */
+    /* margin-inline: auto; */
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
+    margin: 4%;
+
+    /* 上 | 左右 | 下 */
+    /* padding: 1em 2em 2em; */
+
+    /* 上 | 右 | 下 | 左 */
+    /* padding: 5px 1em 0 1em; */
+
+    /* padding: 40px 15px 10px; */
+    /* padding: 40px 15px 10px 50px; */
+    /* padding: 30px 15px 10px 25px; */
+
+    /* 左上 | 右上 | 左下 | 右下 */
+    /* border-radius: 40px 40px 5px 5px; */
+    /* position: relative; */
+}
+
+.comment-walk::before {
+    content: "〇";
+    /* position: absolute; */
+    /* top: calc(50% + 10px); */
+    /* top: calc(50% + 6px); */
+    /* left: 40px; */
+    /* left: 15px; */
+    /* width: 15px; */
+    /* width: 8px; */
+    /* height: 2px; */
+    /* border-radius: 9999px; */
+    /* background-color: #FFF; */
+    color: hsl(206, 6%, 79%);
+    font-weight: 100;
+    font-size: 16px;
+    /* transform-origin: 1.5px 50%; */
+}
+
+.comment-walk span {
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 1000;
+    margin-right: 10px;
+}
+
+
+.mobile-top p {
+    /* color: hsl(0, 0%, 100%); */
+    /* color: hsl(270, 20%, 96%); */
+    /* color: hsl(289, 100%, 72%); */
 }
 
 /* - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%) */
@@ -50,6 +182,8 @@ h1 {
 
 .mobile-top {
     width: calc(100% - 95px);
+    width: calc(100% - 60px);
+    margin-inline: auto;
     background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
 
     /* 上 | 左右 | 下 */
@@ -58,16 +192,24 @@ h1 {
     /* 上 | 右 | 下 | 左 */
     /* padding: 5px 1em 0 1em; */
 
-    padding: 40px 15px 10px;
-    padding: 40px 15px 10px 50px;
+    /* padding: 40px 15px 10px; */
+    /* padding: 40px 15px 10px 50px; */
+    padding: 30px 15px 10px 25px;
 
     /* 左上 | 右上 | 左下 | 右下 */
     border-radius: 40px 40px 5px 5px;
 
     position: relative;
+    /* align-items: end; */
 }
 
-.arrow-left {
+.mobile-main {
+    width: calc(100% - 15px);
+    margin-inline: auto;
+    background-color: #F5F3F8;
+}
+
+/* .arrow-left {
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -75,7 +217,7 @@ h1 {
     border-left: 4px solid #000;
     border-bottom: 4px solid #000;
     transform: translate(-50%);
-}
+} */
 
 /* .mobile img::before, */
 /* .mobile img::after { */
@@ -84,9 +226,12 @@ h1 {
     content: "";
     position: absolute;
     top: calc(50% + 10px);
+    top: calc(50% + 6px);
     left: 40px;
+    left: 15px;
     width: 15px;
-    height: 3px;
+    width: 8px;
+    height: 2px;
     border-radius: 9999px;
     background-color: #FFF;
     transform-origin: 1.5px 50%;
@@ -152,19 +297,6 @@ h1 {
     /* left: 10px; */
     /* border-color: transparent transparent transparent hsl(264, 100%, 61%); */
     /* border-color: transparent hsl(264, 100%, 61%) transparent transparent; */
-}
-
-.mobile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid hsl(0, 0%, 100%);
-    margin: 0 15px;
-    /* position: relative; */
-}
-
-.mobile-top p {
-    color: hsl(0, 0%, 100%);
 }
 
 /* Submitボタンの色 */
